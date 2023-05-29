@@ -1,1 +1,115 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <img [src]="['assets/img/logo-opsd.svg']" [ngClass]="['main-logo']">
+    </mat-toolbar-row>
+    <div [ngClass]="['menu-container']">
+    
+        <div [ngClass]="['menu']">
+            <div [ngClass]="['btnMenu']">
+                <div>
+                    <a [routerLink]="['/inicio']" routerLinkActive="router-link-active">
+                        Inicio
+                    </a>
+                </div>
+                <div>
+                    <a [routerLink]="['nosotros']" routerLinkActive="router-link-active">
+                        Nosotros
+                    </a>
+                </div>
+                <div (click)="showSubMenu()" (mouseleave)="activeSubMenu=false">
+                    Edificios
+                    <div *ngIf="activeSubMenu" [ngClass]="['sub-menu-box']">
+                        <div>
+                            <a [routerLink]="['/eops1']" routerLinkActive="router-link-active">
+                                Eops 1
+                            </a>
+                        </div>
+                        <div>
+                            <a [routerLink]="['/eops2']" routerLinkActive="router-link-active">
+                                Eops 2
+                            </a>
+                        </div>
+                        <div>
+                            <a [routerLink]="['/eops3']" routerLinkActive="router-link-active">
+                                Eops 3
+                            </a>
+                        </div>
+                        <div>
+                            <a [routerLink]="['/eops4']" routerLinkActive="router-link-active">
+                                Eops 4
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a [routerLink]="['/food-court']" routerLinkActive="router-link-active">
+                        Foodcourt
+                    </a>
+                </div>
+                <div>
+                    <a [routerLink]="['/workplace']" routerLinkActive="router-link-active">
+                        Workplace
+                    </a>
+                </div>
+                <div>
+                    <button [ngClass]="['btnContact']" [routerLink]="['/contacto']">
+                        Contáctanos
+                    </button>
+                </div>
+            </div>
+            <div [ngClass]="['socialMenu']">
+                <div [ngClass]="['socialBarMenu']"></div>
+                <div>
+                    <a [href]="'https://www.facebook.com/ofiplazasandionisio/'">
+                        <img [src]="'assets/img/icons/icon-25.svg'" width="40">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-toolbar>
+
+
 <router-outlet></router-outlet>
+
+
+
+<footer>
+    <div [ngClass]="['footer-back-image']">
+        <img [src]="'assets/img/footer-back-61.png'" width="100%">
+
+
+        <div [ngClass]="['footer-content']">
+
+            <div [ngClass]="['footer-white-barr']"></div>
+    
+            <div [ngClass]="['social-footer']">
+                <div >
+                    <a [href]="'https://www.facebook.com/ofiplazasandionisio/'"  >
+                        <img [src]="'assets/img/icons/fb-white-62.svg'" width="40">
+                    </a>
+                </div>
+            </div>
+            <div [ngClass]="['text-footer']">
+                <img [src]="'assets/img/icons/icon-29.svg'" width="20px"> <span>Semaforo Colegio Americano, 10m al Norte</span>
+            </div>
+            <div [ngClass]="['text-footer']"> 
+                <img [src]="'assets/img/icons/icon-30.svg'" width="20"> <span>+(505) 8941-5700</span>
+            </div>
+            <div [ngClass]="['text-footer']"> 
+                <img [src]="'assets/img/icons/icon-31.svg'" width="20"> <span>Ventas@infodesarrollos.com</span>
+            </div>
+            <button [ngClass]="['btnContact']" [routerLink]="['/contacto']">CONTÁCTANOS</button>
+
+            <div [ngClass]="['footer-white-barr']"></div>
+
+            <div>
+                <span>
+                    Todos los derechos reservador copyright© {{anio.getFullYear()}}, ClikcNicaragua Soluciones, Diseño y Desarrollo web: Ennio J. Sáenz M.
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+

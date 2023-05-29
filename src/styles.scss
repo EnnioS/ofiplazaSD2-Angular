@@ -1,4 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+.banner .owl-prev, .banner .owl-next{
+    position:absolute !important;
+    width: 40px !important;
+    height: 40px !important;
+    bottom:45% !important;
+}
+
+.banner .owl-dots{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+}
+
+.banner .owl-prev{
+    left: 1.5rem;
+    
+}
+
+.banner .owl-next{
+    right: 1.5rem;
+}
+

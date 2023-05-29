@@ -16,8 +16,11 @@ import {MatIconModule} from '@angular/material/icon';
 
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+
+import {CarouselModule} from 'ngx-owl-carousel-o';
 
 
 
@@ -40,8 +43,10 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     MatIconModule,
     MatDialogModule,
     MatSnackBarModule,
+    MatToolbarModule,
     MatTooltipModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    CarouselModule
   ]
 })
 export class SharedModule { }

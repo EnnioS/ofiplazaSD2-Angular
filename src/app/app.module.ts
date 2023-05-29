@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutComponent } from './Components/Layout/layout.component';
 import { SharedModule } from './Reutilizable/shared/shared.module';
 
+import {CarouselModule} from 'ngx-owl-carousel-o';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { SharedModule } from './Reutilizable/shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
