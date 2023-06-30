@@ -1,4 +1,6 @@
 
+
+//MENU
 mat-toolbar{
     background-color: hsl(199, 21%, 26%);
 }
@@ -10,10 +12,15 @@ mat-toolbar-row{
     align-items: center;
     height: 100px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 100;
 }
 
 .main-logo{
     width: 150px;
+}
+
+.menu-mobile{
+    display: none;
 }
 
 .menu-container{
@@ -47,6 +54,10 @@ mat-toolbar-row{
     justify-content: center;
     align-items: center;
     gap: 15px;
+}
+
+.btnEdificios{
+    cursor: pointer;
 }
 
 .socialMenu{
@@ -111,13 +122,18 @@ mat-toolbar-row{
 
 //FOOTER STYLES
 
+.footer{
+    text-align: center;
+}
+
 .footer-back-image{
     position: relative;    
 }
 
 .footer-white-barr{
-    height: 4px;
-    width: 340px;
+    height: 3px;
+    width: 100%;
+    max-width: 340px;
     background-color: #fff;
     margin:15px 0;
 }
@@ -129,7 +145,7 @@ mat-toolbar-row{
     justify-content: center;
     align-items: center;
     bottom: 0;
-    margin: 30px;
+    margin: 30px !important;
     color: #fff;
     margin-left: auto;
     margin-right: auto;
@@ -145,6 +161,7 @@ mat-toolbar-row{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 .text-footer span{
@@ -155,3 +172,208 @@ mat-toolbar-row{
 .footer-content .btnContact{
     margin: 20px 0 5px 0;
 }
+
+@media only screen and (max-width:950px){
+    //HEADER
+    mat-toolbar-row{
+      
+        height: 85px;
+    }
+    
+    .main-logo{
+        width: 120px;
+    }
+
+    //MENU
+    mat-toolbar{
+        font-size: 17px;
+    }
+
+    
+    .btnContact{ 
+    font-size: 12pt;
+    font-weight: bold;
+    }
+    
+    .menu{
+        height: 55px;
+        top: 100px;
+    }
+
+    .socialBarMenu{
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width:840px){
+
+    //HEADER
+    mat-toolbar-row{
+        height: 75px;
+    }
+    
+    .main-logo{
+        width: 100px;
+    }
+
+    //MENU
+    mat-toolbar{
+        font-size: 16px;
+    }
+
+    
+    .btnContact{ 
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .menu{
+        height: 50px;
+        top:95px
+    }
+
+    .btnMenu{
+        gap: 8px;
+    }
+
+    .socialBarMenu{
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width:768px){
+
+    mat-toolbar{
+        font-size: 20px;
+    }
+
+    .menu-contact-bar{
+        display: none;
+    }
+    
+    mat-toolbar-row{
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .main-logo{
+        width: 100px;
+    }
+
+    .menu-mobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .menu-mobile a img{
+        vertical-align: middle;
+    }
+
+    .burger-icon-mobile{
+        width: 55px;
+    }
+
+    .menu-container{
+        position: relative;
+    }
+    .menu{
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items:center;
+        background-color: unset;
+        top: 59px;
+        height: 350px;
+        width: 200px;
+        margin-left: 0;
+        margin-right: none;
+        padding: 0;
+        left: 0;
+        right: auto;
+        text-align: center;
+        box-shadow: unset;
+        z-index: 2;
+    }
+
+    .btnMenu{
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        border-radius: 0 0 10px 0;
+        flex-direction: column;
+        align-items: start;
+        gap:0px;
+        
+    }
+
+    .btn-menu-card{
+        width: 100%;
+    }
+
+    .btnMenu a{
+        align-items: center;
+        display: flex;
+        border-radius: 0;
+        padding:0 !important;
+        // margin: 2px 8px;
+        width: 100%;
+        height: 55px;
+    }
+
+    .btnEdificios{
+        align-items: start;
+        flex-direction: column;
+        display: flex;
+        border-radius: 0;
+        padding:0 !important;
+        width: 100%;
+        height: 100%;
+        color: hsl(199, 21%, 26%);
+    }
+
+    .btnEdificios .menu-text{
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .menu-text{
+        margin-left: 15px;
+    }
+
+    .sub-menu-box{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color:unset !important;
+        border-radius: 0;
+        left: 0px;
+    }
+
+    .sub-menu-box .menu-text{
+        margin-left: 45px;
+    }
+
+    .menu-contact-bar{
+        display: block;
+        margin: 20px;
+        width: 75%;
+        height: 2px;
+        background-color:  hsl(199, 21%, 26%);
+    }
+
+    .btnContact{ 
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .socialMenu{
+        display: none;
+    }
+
+
+}
+

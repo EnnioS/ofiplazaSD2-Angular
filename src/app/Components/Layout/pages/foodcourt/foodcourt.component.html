@@ -1,1 +1,66 @@
-<p>foodcourt works!</p>
+<section [ngClass]="'seccion-header-image'" (window:resize)="onResize($event)">
+    <img src="{{imgHead}}">
+    <div [ngClass]="['gray-bar-lg']"></div>
+    <div [ngClass]="['body-page','font-blue']">
+        <div [ngClass]="['title','text-center','title-page']">
+            <span>
+                FOOD COURT<br>
+                SAN DIONISIO
+            </span>
+        </div>
+        <div [ngClass]="['gray-bar-sm']">
+        </div>
+        <div [ngClass]="['sub-title','main-text-page']">
+            <span>
+                <p>
+                    Food Court San Dionisio se encuentra ubicada en nuestra 3ra etapa EOPS 3,
+                    con capacidad para 100 comensales con un ambiente tranquilo y fresco,
+                    donde clientes y colaboradores podrán compartir y relajarse,  ya que dispone
+                    de cómodos espacios y una terraza al aire libre, contamos con una variedad de
+                    comida para nuestros clientes.
+                </p>
+                <p>
+                    Higiene y mantenimiento, Seguridad 24/7, Parqueo y Accesibilidad para personas discapacitadas
+                </p>
+            </span>
+        </div>
+        <div [ngClass]="['gray-bar-sm']">
+        </div>
+
+        <div>
+            <div [ngClass]="['images-collection-page']">
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/foodcourt/foodcourt-images-68.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/foodcourt/foodcourt-images-69.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/foodcourt/foodcourt-images-70.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/foodcourt/foodcourt-images-71.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/foodcourt/foodcourt-images-72.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/foodcourt/foodcourt-images-73.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/foodcourt/foodcourt-images-74.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/foodcourt/foodcourt-images-75.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+
+
+
+

@@ -1,6 +1,465 @@
+.main-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+//SECCION INTRO
+
+.section-intro, .video-container-main, .beneficios-div, .seccion-especiales,
+ .seccion-edificios, .section-infraestructura, .section-logo-clientes{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 8%;
+    width: 100%;
+    max-width: 1600px;
+}
+
+//ESTILOS GLOBALES
+.title{
+    font-family:'Myriad Pro', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.sub-title{
+    font-family:'Myriad Pro', sans-serif;
+    font-size: 1.5em;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.font-white{
+    color:#fff;
+}
+
+.font-blue{
+    color: #354851;
+}
+
+.back-blue{
+    background: #354851;
+}
+
+.back-orange{
+    background-color: #EF7B00;
+}
+
+
+
+//SECCIÓN SLIDE DE IMÁGENES
 .banner{
     position: relative;
     border-radius: 0 0 15% 15%;
     overflow: hidden;
 }
+
+
+//SECCIÓN INTRO
+
+.gray-bar-sm{
+    height: 2px;
+    width: 100%;
+    background-color: #C7CED3;
+    margin: 20px 0;
+}
+
+.gray-bar-lg{
+    height: 15px;
+    width: 100%;
+    background-color: #C7CED3;
+}
+
+.box-section-intro-contanier
+{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 5%;
+    margin: 10px 0 0 0;
+}
+
+.box-section-intro{
+    border: solid #354851;
+    border-radius: 10px;
+    width: 270px;
+    height: 270px;
+    margin: 15px 0;
+    background-color: #fff;
+}
+
+.box-section-intro:hover{
+    width: 280px;
+    height: 280px;
+    border: none;
+    background-color: #EF7B00;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.1,1.1);
+    transition: 1s;
+}
+
+.box-section-intro:hover:hover .box-section-text-container{
+   color: #fff;
+   font-size: 1.5em;
+}
+.box-section-intro:hover:hover .box-section-image-cntainer svg{
+    fill: #fff !important;
+    width: 80px;
+ }
+
+.box-section-image-cntainer{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.box-section-image-cntainer svg{
+    width: 70px;transition: 0.5s;
+    fill:#354851;
+}
+
+.box-section-text-container{
+    margin: 0 15px 15px 15px;
+    font-size: 1.3em;
+}
+
+
+
+//SECCIÓN VIDEO
+
+.text-video-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 45%;
+}
+
+.video-titulo{
+    line-height: normal;
+}
+
+.video-div{
+    width: 50%;
+}
+
+.video-container{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.video .video-player-yt{
+    border: solid 3px #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 450px;
+    height: 250px;
+}
+
+.btnContact{
+    background-color: #EF7B00;
+    padding:  5px 15px 5px 15px;
+    border-radius: 30px;
+    border:none;
+    color: #fff;
+    font-size: 12pt;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnContact:hover{
+    background-color: #fff;
+    color: #354851;
+}
+
+.btnContact-container{
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+}
+
+
+@media only screen and (max-width:980px) {
+    .video-container{
+        flex-direction: column;
+    }
+
+    .text-video-container{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+    
+    .video-div{
+        width: 100%;
+    }
+
+    .video .video-player-yt{
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width:830px) {
+    .video .video-player-yt{
+        width: 100%;
+        height: 330px;
+    }
+}
+@media only screen and (max-width:670px) {
+    .video .video-player-yt{
+        width: 100%;
+        height: 280px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .video .video-player-yt{
+        width: 100%;
+        height: 210px;
+    }
+}
+
+@media only screen and (max-width:390px) {
+    .video .video-player-yt{
+        width: 100%;
+        height:170px;
+    }
+}
+
+
+
+//SECCIÓN BENEFICIO
+
+.beneficios-boxes{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.beneficio-div{
+    display: block;
+    width: 45%;
+}
+
+.beneficio-divisor{
+    display: block;
+    height: 400px;
+    width: 2px;
+}
+
+.beneficio-img-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin: 10px ;
+}
+
+.beneficio-img-container img{
+    width: 40px;
+}
+
+@media only screen and (max-width:980px) {
+    .beneficios-boxes{
+        display: flex;
+        flex-flow: column;
+        gap: 0px;
+    }
+
+    .beneficio-div{
+        width: 100%;
+    }
+
+    .beneficio-divisor{
+        display: none;
+    }
+}
+
+
+//SECCIÓN ESPECIALES
+
+.especiales-boxes{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 30px;
+}
+
+.especiales-box{
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.especiales-box:hover{
+    transform: scale(1.1,1.1);
+    transition: 1s;
+    box-shadow: 3px 3px 10px 1px #354851;
+}
+
+.especiales-box:hover .franja-titulo{
+    background-color: rgba($color: #EF7B00, $alpha: 0.6);
+}
+
+.especiales-img-container img{
+    width: 400px;
+}
+
+.franja-titulo{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba($color: #354851, $alpha: 0.6);
+    text-align: center;
+    padding: 30px;
+}
+
+@media only screen and (max-width:980px) {
+    .especiales-img-container img{
+        width: 100%;
+    }
+}
+
+
+
+//SECCIÓN EDIFICIOS
+
+.edificio-boxes{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.edificio-box{
+    overflow: hidden;
+    width: 187px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    border: #354851 solid 3px;
+    border-radius: 15px;
+    
+}
+
+.edificio-box-text-btn{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+.edificio-box:hover{
+    background-color: #354851;
+    border-color: #EF7B00;
+    transform: scale(1.1,1.1);
+    transition: 1s;
+}
+
+.edificio-box:hover .edificio-text{
+    color: #fff;
+}
+
+.edificio-box:hover .btnContact:hover{
+    background-color: #fff;
+}
+
+.edificio-box:hover .gray-bar-lg{
+    background-color: #EF7B00;
+}
+
+
+
+//SECCIÖN INFRAESTRUCTURA
+.infra-box{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.infra-items{
+    margin-top: 15px;
+}
+
+.infra-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.infra-item-square{
+    width: 10px;
+     height: 10px; 
+     background-color:#fff;
+     margin-right: 10px;
+}
+
+
+
+
+//SECCIÓN LOGO CLIENTES
+
+.logo-text-clie-container{
+    margin-top: 5px;
+}
+
+.white-bar{
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin: 30px 0;
+}
+
+.logo-clie-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo-imgs-clie-container img{
+    height: 50px;
+    margin:10px 18px;
+}
+
+@media only screen and (max-width:980px) {
+    .logo-clie-container{
+        flex-direction: column;
+        justify-content: center;
+        gap: 55px;
+    }
+    
+}
+
+@media only screen and (max-width:600px) {
+    .logo-imgs-clie-container img{
+        height: 40px;
+        margin:10px 18px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .title{
+        font-size: 2.2em;
+    }
+    
+    .sub-title{
+        font-size: 1.2em;
+    }
+}
+

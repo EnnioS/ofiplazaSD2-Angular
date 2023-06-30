@@ -14,15 +14,16 @@ import { Eops4Component } from './pages/eops4/eops4.component';
 const routes: Routes = [{
   path:'',component:LayoutComponent,
   children:[
-    {path:'inicio', component:HomeComponent},
-    {path:'nosotros', component:NosotrosComponent},
-    {path:'contacto', component:ContactoComponent},
-    {path:'food-court', component:FoodcourtComponent},
-    {path:'workplace', component:WorkplaceComponent},
-    {path:'eops1', component:Eops1Component},
-    {path:'eops2', component:Eops2Component},
-    {path:'eops3', component:Eops3Component},
-    {path:'eops4', component:Eops4Component},
+    {path:'', title:"Inicio - Ofiplaza San Dionisio", component:HomeComponent},
+    {path:'inicio', title:"Inicio - Ofiplaza San Dionisio", component:HomeComponent},
+    {path:'nosotros', title:"Nosotros - Ofiplaza San Dionisio", component:NosotrosComponent},
+    {path:'contacto', title:"Contácanos - Ofiplaza San Dionisio", component:ContactoComponent},
+    {path:'food-court', title:"Foodcourt - Ofiplaza San Dionisio", component:FoodcourtComponent},
+    {path:'workplace', title:"workplace - Ofiplaza San Dionisio", component:WorkplaceComponent},
+    {path:'eops1', title:"EOPS1 - Ofiplaza San Dionisio", component:Eops1Component},
+    {path:'eops2', title:"EOPS2 - Ofiplaza San Dionisio", component:Eops2Component},
+    {path:'eops3', title:"EOPS3 - Ofiplaza San Dionisio", component:Eops3Component},
+    {path:'eops4', title:"EOPS4 - Ofiplaza San Dionisio", component:Eops4Component},
     {path:'**', redirectTo:'inicio', pathMatch:'full'}
   ]
 }];

@@ -1,59 +1,66 @@
 <mat-toolbar>
-    <mat-toolbar-row>
+    <mat-toolbar-row (window:resize)="onResize($event)">
         <img [src]="['assets/img/logo-opsd.svg']" [ngClass]="['main-logo']">
+        <div [ngClass]="['menu-mobile']">
+            <a [href]="'https://www.facebook.com/ofiplazasandionisio/'">
+                <img [ngClass]="['fb-icon-mobile']" [src]="'assets/img/icons/fb-white-62.svg'" width="40">
+            </a>
+            <img (click)="showMobileMenu()" [ngClass]="['burger-icon-mobile']" [src]="['assets/img/icons/burger.svg']">
+        </div>
     </mat-toolbar-row>
     <div [ngClass]="['menu-container']">
     
-        <div [ngClass]="['menu']">
+        <div [ngClass]="['menu']" *ngIf="activeMobileMenu">
             <div [ngClass]="['btnMenu']">
-                <div>
+                <div [ngClass]="['btn-menu-card']">
                     <a [routerLink]="['/inicio']" routerLinkActive="router-link-active">
-                        Inicio
+                        <span [ngClass]="['menu-text']">Inicio</span>
                     </a>
                 </div>
-                <div>
+                <div [ngClass]="['btn-menu-card']">
                     <a [routerLink]="['nosotros']" routerLinkActive="router-link-active">
-                        Nosotros
+                        <span [ngClass]="['menu-text']"> Nosotros</span>
                     </a>
                 </div>
-                <div (click)="showSubMenu()" (mouseleave)="activeSubMenu=false">
-                    Edificios
+                <div  [ngClass]="['btnEdificios']" (click)="showSubMenu()" (mouseleave)="activeSubMenu=false">
+                    <span [ngClass]="['menu-text']">Edificios</span>
                     <div *ngIf="activeSubMenu" [ngClass]="['sub-menu-box']">
                         <div>
                             <a [routerLink]="['/eops1']" routerLinkActive="router-link-active">
-                                Eops 1
+                                <span [ngClass]="['menu-text']">Eops 1</span>
                             </a>
                         </div>
                         <div>
                             <a [routerLink]="['/eops2']" routerLinkActive="router-link-active">
-                                Eops 2
+                                <span [ngClass]="['menu-text']">Eops 2</span>
                             </a>
                         </div>
                         <div>
                             <a [routerLink]="['/eops3']" routerLinkActive="router-link-active">
-                                Eops 3
+                                <span [ngClass]="['menu-text']"> Eops 3</span>
                             </a>
                         </div>
                         <div>
                             <a [routerLink]="['/eops4']" routerLinkActive="router-link-active">
-                                Eops 4
+                                <span [ngClass]="['menu-text']">Eops 4 </span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div [ngClass]="['btn-menu-card']">
                     <a [routerLink]="['/food-court']" routerLinkActive="router-link-active">
-                        Foodcourt
+                        <span [ngClass]="['menu-text']">Foodcourt</span>
                     </a>
                 </div>
-                <div>
+                <div  [ngClass]="['btn-menu-card']">
                     <a [routerLink]="['/workplace']" routerLinkActive="router-link-active">
-                        Workplace
+                        <span [ngClass]="['menu-text']">Workplace</span>
                     </a>
                 </div>
-                <div>
+                <div [ngClass]="['menu-contact-bar']"></div>
+                <div  [ngClass]="['btn-menu-card']">
                     <button [ngClass]="['btnContact']" [routerLink]="['/contacto']">
-                        Contáctanos
+                        <span>Contáctanos</span>
                     </button>
                 </div>
             </div>
@@ -74,9 +81,9 @@
 
 
 
-<footer>
+<footer [ngClass]="['footer']">
     <div [ngClass]="['footer-back-image']">
-        <img [src]="'assets/img/footer-back-61.png'" width="100%">
+        <img [src]="footerImg" width="100%">
 
 
         <div [ngClass]="['footer-content']">

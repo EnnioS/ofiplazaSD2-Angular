@@ -1,5 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-
+//CAROUSEL OWL STYLES
 html, body { height: 100%; }
 body{
     padding: 0;
@@ -22,13 +21,26 @@ body{
     right: 0;
     bottom: 10px;
 }
+.banner .owl-dots .owl-dot .actve{
+    background-color: red;
+}
 
 .banner .owl-prev{
+    display: flex !important;
     left: 1.5rem;
-    
 }
 
 .banner .owl-next{
+    display: flex !important;
     right: 1.5rem;
 }
 
+.owl-theme .owl-nav [class*=owl-] {
+    color: #FFF;
+    margin: 1px;
+    padding: 0px -1px;
+    background: rgba($color: #fff, $alpha: 0.3);
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 100%;
+}

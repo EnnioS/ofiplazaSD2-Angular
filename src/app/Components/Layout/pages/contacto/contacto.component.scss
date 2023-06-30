@@ -1,0 +1,175 @@
+//ESTILOS GLOBALES
+.main-section{
+    display: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 8%;
+    width: 100%;
+}
+
+.title{
+    font-family:'Myriad Pro', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.sub-title{
+    font-family:'Myriad Pro', sans-serif;
+    font-size: 1.5em;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+.style-list-none{
+    list-style: none;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.font-white{
+    color:#fff;
+}
+
+.font-blue{
+    color: #354851;
+}
+
+.back-blue{
+    background: #354851;
+}
+
+.back-orange{
+    background-color: #EF7B00;
+}
+.seccion-header-image img{
+    width: 100%;
+}
+
+.gray-bar-lg{
+    height: 10px;
+    width: 100%;
+    background-color: #C7CED3;
+    box-shadow: 1px 1px 7px 1px gray;
+}
+
+.gray-bar-sm{
+    height: 2px;
+    width: 100%;
+    background-color: #C7CED3;
+    margin: 20px 0;
+}
+
+.margin-top-20px{
+    margin-top: 20px;
+}
+.margin-bottom-10px{
+    margin-bottom: 10px;
+}
+
+.title-page{
+    line-height: 1em;
+    margin: 20px 0 15px 0;
+}
+
+.main-text-page{
+    margin: 20px 0;
+}
+
+
+
+//SECCIÓON CONTACTO
+
+.contact-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30x;
+}
+
+.contact-text-container{
+    width: 50%;
+}
+
+.no-box-shadow{
+    box-shadow: unset !important;
+}
+
+.seccion-ubicanos{
+    padding-bottom: 50px;
+}
+
+.form-contact-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.form-contact-container form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:15px
+}
+
+.form-contact-container form div input, .form-contact-container form div textarea{
+   border:solid 2px #354851;
+   width: 100%;
+   border-radius: 5px;
+    padding: 5px;
+}
+
+.btn-content{
+    text-align: end;
+ }
+.form-contact-container form div button{
+    width: 120px;
+ }
+
+ .btnContact{
+    background-color: #EF7B00;
+    padding:  5px 15px 5px 15px;
+    border-radius: 30px;
+    border:none;
+    color: #fff;
+    font-size: 12pt;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnContact:hover{
+    background-color: #fff;
+    color: #354851;
+}
+
+
+@media only screen and (max-width:900px){
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-text-container ul{
+        padding: 0;
+    }
+
+    .contact-text-container{
+        text-align: center;
+    }
+    .contact-text-container, .form-contact-container{
+        width: 100%;
+    }
+
+}

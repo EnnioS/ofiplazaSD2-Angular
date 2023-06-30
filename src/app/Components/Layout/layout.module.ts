@@ -18,6 +18,17 @@ import { HeadeImageComponent } from './pages/secciones/heade-image/heade-image.c
 import { ContenidoComponent } from './pages/secciones/contenido/contenido.component';
 import { FooterImagesComponent } from './pages/secciones/footer-images/footer-images.component';
 import { SharedModule } from 'src/app/Reutilizable/shared/shared.module';
+import {CarouselModule} from 'ngx-owl-carousel-o';
+import { MapsComponent } from './pages/Utilities/maps/maps.component';
+
+
+//Video
+import {VgCoreModule} from '@videogular/ngx-videogular/core';
+import {VgControlsModule} from '@videogular/ngx-videogular/controls';
+import {VgOverlayPlayModule} from '@videogular/ngx-videogular/overlay-play';
+import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
+
+import { AlertModule } from './pages/Utilities/alert';
 
 
 @NgModule({
@@ -35,12 +46,19 @@ import { SharedModule } from 'src/app/Reutilizable/shared/shared.module';
     Eops4Component,
     HeadeImageComponent,
     ContenidoComponent,
-    FooterImagesComponent
+    FooterImagesComponent,
+    MapsComponent
   ],
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    SharedModule
+    SharedModule,
+    CarouselModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule,
+    AlertModule,
   ]
 })
 export class LayoutModule { }

@@ -1,1 +1,140 @@
-<p>contacto works!</p>
+<section [ngClass]="'seccion-header-image'" (window:resize)="onResize($event)">
+    <img src="{{imgHead}}">
+    <div [ngClass]="['gray-bar-lg']"></div>
+</section>
+<section class="main-section">
+    <div [ngClass]="['body-page','font-blue']">
+        <div [ngClass]="['title','text-center','title-page']">
+            <span>
+                CONÓZCANOS
+            </span>
+        </div>
+
+        <div [ngClass]="['gray-bar-sm']"></div>
+
+        <div [ngClass]="['main-text-page', 'contact-container']">
+
+            <div [ngClass]="['contact-text-container']">
+                <ul [ngClass]="'style-list-none'">
+                    
+                    <li>
+                        <div [ngClass]="['sub-title','font-bold','margin-bottom-10px']">
+                            <span>
+                                Dirección
+                            </span>
+                        </div>
+                        <ul [ngClass]="'style-list-none'">
+                            <li [ngClass]="'sub-title'">
+                                Pista Suburbana, semaforo Colegio<br>
+                                Americano 100 vrs al Oeste.
+                            </li>
+                        </ul>
+                    </li>
+                    <li  [ngClass]="'margin-top-20px'">
+                        <div [ngClass]="['sub-title','font-bold','margin-bottom-10px']">
+                            <span>
+                                Teléfonos
+                            </span>
+                        </div>
+                        <ul [ngClass]="'style-list-none'">
+                            <li [ngClass]="'sub-title'">
+                                +(505) 8941 5700
+                            </li>
+                        </ul>
+                    </li>
+                    <li [ngClass]="'margin-top-20px'">
+                        <div [ngClass]="['sub-title','font-bold','margin-bottom-10px']">
+                            <span>
+                                Email
+                            </span>
+                        </div>
+                        <ul [ngClass]="'style-list-none'">
+                            <li [ngClass]="'sub-title'">
+                                ventas@infodesarrollos.com
+                            </li>
+                        </ul>
+                    </li>
+                    <li [ngClass]="'margin-top-20px'">
+                        <div [ngClass]="['sub-title','font-bold','margin-bottom-10px']">
+                            <span>
+                                Horario de atención
+                            </span>
+                        </div>
+                        <ul [ngClass]="'style-list-none'">
+                            <li [ngClass]="'sub-title'">
+                                <div>
+                                    <span>
+                                        Luneas a viernes<br>
+                                        8:00 am - 5:00 pm
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>
+                                        Sábados<br>
+                                        8:00 am - 12:00 md
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div [ngClass]="'form-contact-container'">
+                <alert></alert>
+                <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
+                    <div>
+                        
+                        <input type="text" name="name" placeholder="Nombre completo" formControlName="name">
+                    </div>
+                    <div>
+                        
+                        <input type="email" name="email" placeholder="Correo" formControlName="email">
+                    </div>
+                    <div>
+                        
+                        <input type="text" name="subject" placeholder="Asunto" formControlName="subject">
+                    </div>
+                    <div>
+                    
+                        <textarea rows="10" cols="50" formControlName="message" name="message" placeholder="Escriba su mensaje">
+                        </textarea>
+                    </div>
+                    <div [ngClass]="['btn-content']">
+                        <button [ngClass]="['btnContact']" type="submit" [disabled]="!FormData.valid">{{tituloAccion}}</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div [ngClass]="['gray-bar-sm']"></div>
+
+    </div>
+</section>
+
+<section [ngClass]="'seccion-ubicanos'">
+
+    <div [ngClass]="['title','text-center','title-page','font-blue']">
+        <span>
+            UBICANOS
+        </span>
+    </div>
+    
+    <div [ngClass]="['gray-bar-lg','no-box-shadow']"></div>
+
+    <div style="height: 500px;">
+        <app-maps></app-maps>
+    </div>
+    
+    <div [ngClass]="['gray-bar-lg','no-box-shadow']"></div>
+</section>
+
+
+
+
+
+
+
+

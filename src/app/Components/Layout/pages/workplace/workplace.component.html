@@ -1,1 +1,67 @@
-<p>workplace works!</p>
+<section [ngClass]="'seccion-header-image'" (window:resize)="onResize($event)">
+    <img src="{{imgHead}}">
+    <div [ngClass]="['gray-bar-lg']"></div>
+    <div [ngClass]="['body-page','font-blue']">
+        <div [ngClass]="['title','text-center','title-page']">
+            <span>
+                WORKPLACE<br>
+                SAN DIONISIO
+            </span>
+        </div>
+        <div [ngClass]="['gray-bar-sm']">
+        </div>
+        <div [ngClass]="['sub-title','main-text-page']">
+            <span>
+                <p>
+                    Workplace San Dionisio está ubicada en 3er nivel de EOPS 1, cuena con 12 oficinas modernas 
+                    y comodas en diferentes tamaños, ideal para su negocio y economía.
+                </p>
+                <p>
+                    Con el concepto y estilo coworking le incluye:
+                </p>
+                Recepción compatida, Wifi, agua, energía, sala de junta, cafetería y oficinas administrativo del edificio.
+                <p>
+
+
+            </span>
+        </div>
+        <div [ngClass]="['gray-bar-sm']">
+        </div>
+
+        <div>
+            <div [ngClass]="['images-collection-page']">
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/workplace/workplace-images-76.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/workplace/workplace-images-77.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/workplace/workplace-images-78.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/workplace/workplace-images-79.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/workplace/workplace-images-80.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/workplace/workplace-images-81.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/workplace/workplace-images-82.jpg">
+                </div>
+                <div [ngClass]="['image-content']">
+                    <img src="assets/img/workplace/workplace-images-83.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+
+
+
+

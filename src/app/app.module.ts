@@ -7,8 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LayoutComponent } from './Components/Layout/layout.component';
 import { SharedModule } from './Reutilizable/shared/shared.module';
+import { LayoutModule } from './Components/Layout/layout.module';
 
 import {CarouselModule} from 'ngx-owl-carousel-o';
+import { GoogleMapsService } from './Services/google-maps.service';
+import { EmailService } from './Services/email.service';
+
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 
 
 @NgModule({
@@ -20,10 +28,17 @@ import {CarouselModule} from 'ngx-owl-carousel-o';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    LayoutModule,
     SharedModule,
-    CarouselModule
+    CarouselModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    GoogleMapsService,
+    EmailService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+ }

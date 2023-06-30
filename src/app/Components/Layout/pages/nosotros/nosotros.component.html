@@ -1,1 +1,77 @@
-<p>nosotros works!</p>
+<section [ngClass]="'seccion-header-image'" (window:resize)="onResize($event)">
+    <img src="{{imgHead}}">
+    <div [ngClass]="['gray-bar-lg']"></div>
+    <div [ngClass]="['body-page','font-blue']">
+        <div [ngClass]="['title','text-center','title-page']">
+            <span>
+                CONÓZCANOS
+            </span>
+        </div>
+        
+        <div [ngClass]="['main-text-page']">
+
+            <div [ngClass]="['gray-bar-sm']"></div>
+
+            <div>
+                
+                <div [ngClass]="['title','main-text-page']">
+                    <span>Nosotros</span>
+                </div>
+                <div [ngClass]="['sub-title']">
+                    <p>
+                        Desarrollo San Dionisio nace con el objetivo de desarrollar proyectos inmobiliarios mixtos.
+                        A la fecha, se ha posicionado como uno de los centros corporativos de mayor crecimiento a nivel nacional,
+                        con más de 20 mil metros cuadrados de construcctión.
+                    </p>
+                    <p>
+                        Su ubicación privilegiada, con rutas de fácil acceso y su amplitud de áreas destinadas a estacionamientos 
+                        lo han hecho el lugar ideal para la instalación de las oficinas corporativas de empresas importantes.
+                    </p>
+                        
+                    <p>
+                        Cuenta con un selecto grupo de clientes, organizaciones de gran prestigio nacional e internacional.
+                    </p>
+                </div>
+                    
+                
+            </div>
+            
+            <div [ngClass]="['gray-bar-sm','margin-top-20px']"></div>
+
+            <div>
+                <div [ngClass]="['title','main-text-page']">
+                    <span>Misión</span>
+                </div>
+                <div [ngClass]="['sub-title']">
+                    <p>
+                        Desarrollo de proyectos inmbiliarios mixtos para alquiler de espacios en obras grises para comercio y oficinas , 
+                        manteniendo siempre la mejor atención y servicios para nuestros clientes.
+                    </p>
+                   
+                </div>
+            </div>
+
+            <div [ngClass]="['gray-bar-sm','margin-top-20px']"></div>
+
+            <div>
+                <div [ngClass]="['title','main-text-page']">
+                    <span>Visión</span>
+                </div>
+                <div [ngClass]="['sub-title']">
+                    <p>
+                        Posicionarnos como uno de los centros corporativos de mayor crecimiento a nivel nacional.
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</section>
+
+
+
+
+
+
